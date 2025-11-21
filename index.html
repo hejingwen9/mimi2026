@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2026 丙午灵签</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Noto Serif SC"', 'serif'],
+              calligraphy: ['"Ma Shan Zheng"', 'cursive'],
+              hand: ['"Zhi Mang Xing"', 'cursive'],
+            },
+            colors: {
+              'cinnabar': '#BC261A', // Traditional stamp red
+              'chinese-red': '#9E1A1A', // Deep Lacquer Red
+              'lacquer-light': '#D32F2F', // Highlights
+              'bamboo': '#E3CAA5',   // Natural bamboo color
+              'paper-bg': '#F5F5F0', // Rice paper off-white
+              'ink-black': '#2C2C2C', // Ink
+              'gold-accent': '#FFD700', // Bright Gold
+              'gold-muted': '#C5A059', // Bronze Gold
+            },
+            animation: {
+              'shake': 'shake 0.1s cubic-bezier(.36,.07,.19,.97) both infinite',
+              'fade-in': 'fadeIn 1s ease-out forwards',
+              'drop-out': 'dropOut 0.8s ease-in-out forwards',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              shake: {
+                '0%': { transform: 'translate(0, 0) rotate(0deg)' },
+                '25%': { transform: 'translate(2px, 2px) rotate(1deg)' },
+                '50%': { transform: 'translate(0, 0) rotate(0deg)' },
+                '75%': { transform: 'translate(-2px, 2px) rotate(-1deg)' },
+                '100%': { transform: 'translate(0, 0) rotate(0deg)' }
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              dropOut: {
+                '0%': { transform: 'translateY(0) rotate(-1deg)', zIndex: '15' },
+                '40%': { transform: 'translateY(-140px) rotate(-5deg)', zIndex: '15' }, /* Move Up */
+                '45%': { transform: 'translateY(-140px) rotate(-5deg)', zIndex: '30' }, /* Z-Index Switch to Front */
+                '60%': { transform: 'translateY(-140px) rotate(15deg)', zIndex: '30' }, /* Tip Over */
+                '100%': { transform: 'translateY(200px) rotate(85deg)', zIndex: '30' }, /* Drop Down */
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for the result modal */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #C5A059; 
+        border-radius: 3px;
+      }
+      
+      /* Paper Texture Overlay */
+      .paper-texture {
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
